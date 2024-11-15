@@ -3,7 +3,7 @@ class ListsController < ApplicationController
     @lists = List.all
   end
   def show
-    @bookmarks = @list.bookmarks  # Liste des films bookmarkés pour cette liste
+    @list = List.find(params[:id])
   end
   def new
     @list = List.new
